@@ -204,6 +204,7 @@ const globalStatus = $('#global-search-status');
 const globalResults = $('#global-search-results');
 if (globalDialog && globalTrigger && globalInput && globalStatus && globalResults) {
   const globalSources = [
+    { path: 'qol.html', name: '生活质量更新' },
     { path: 'miyabi.html', name: '星见雅' },
     { path: 'zzz.html', name: '绝区零模组' }
   ];
