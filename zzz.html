@@ -4,20 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="绝区零模组介绍：驱动盘、音像店、芯片和空洞木箱。">
-<meta name="theme-color" content="#183f49">
-<title>绝区零模组 · 模组使用手册</title>
-<link rel="icon" href="assets/zzz-modicon.png">
-<link rel="stylesheet" href="style.css?v=wiki-1">
+<title>绝区零模组 · 饥荒模组文档</title>
+<link rel="stylesheet" href="style.css?v=docs-1">
 </head>
 <body>
 <script>try{document.body.classList.toggle('dark',localStorage.getItem('miyabi-theme')==='dark')}catch{}</script>
 <a class="skip-link" href="#main-content">跳到正文</a>
 <aside class="sidebar" id="sidebar">
-<a class="brand" href="index.html">
-<img class="seal" src="assets/zzz-modicon.png" alt="绝区零模组图标" width="43" height="43">
-<span>绝区零<small>模组使用手册</small>
-</span>
-</a>
+<a class="brand" href="index.html">饥荒模组文档</a>
 <nav class="site-switch" aria-label="模组手册">
 <a href="index.html">首页</a>
 <a href="miyabi.html">星见雅</a>
@@ -30,9 +24,8 @@
 <button data-filter="materials">材料</button>
 <button data-filter="buildings">建筑</button>
 </div>
-<div class="nav-caption">本页目录 <span id="count">14</span>
-</div>
-<nav id="nav">
+<div class="nav-caption">本页目录</div>
+<nav id="nav" aria-label="本页目录">
 <a href="#core" data-tag="overview">模组介绍</a>
 <a href="#profile" data-tag="system">角色资料</a>
 <a href="#attributes" data-tag="system">属性与变种</a>
@@ -48,22 +41,17 @@
 <a href="#sharkboo" data-tag="system">鲨牙布</a>
 <a href="#beacon" data-tag="buildings">信标</a>
 </nav>
-<p id="empty" hidden>没有找到词条，试试“驱动盘”或“音像店”。</p>
 <div class="side-bottom">饥荒联机版 · 关东<small>非官方同人模组</small>
 </div>
 </aside>
 <div class="page">
 <header class="topbar">
-<button class="menu" id="menu" aria-label="打开目录" aria-controls="sidebar" aria-expanded="false">
+<button class="menu" id="menu" aria-label="目录" aria-controls="sidebar" aria-expanded="false">
 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
 <path d="M4 7h16M4 12h16M4 17h16"/>
 </svg>
 </button>
-<div>
-<a href="index.html">使用手册</a>
-<span>/</span>
-<strong>绝区零模组</strong>
-</div>
+<a class="mobile-brand" href="index.html">饥荒模组文档</a>
 <div class="top-actions">
 <button class="global-search-trigger" id="global-search-open" type="button" aria-label="搜索全部资料" aria-haspopup="dialog" aria-controls="global-search-dialog">
 <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg>
@@ -84,14 +72,9 @@
 <p class="lead">提供驱动盘、音像店、邦布与共用材料，可独立启用。使用星见雅时，需同时启用此模组。</p>
 <p class="muted">服务端与客户端均需启用。公共配方在“绝区零”分类，符箓在“云岿山术法”分类。加载壁纸共 12 张，自动轮换。</p>
 </div>
-<div class="hero-art">
-<img src="assets/zzz-modicon.png" alt="绝区零模组图标">
-</div>
 </section>
-<div class="reading-layout">
-<div class="entries">
 <details>
-<summary>其他物品<span>+</span>
+<summary>其他物品
 </summary>
 <p>三种高阶异体刃、邦邦大背包和高阶抗蚀器目前仅有物品展示、库存与存档功能，尚未加入对应装备机制。储蓄电卡已可用于合成以太电池。</p>
 </details>
@@ -121,7 +104,7 @@
 <h3 id="factions">阵营展示</h3>
 <p>星见雅显示“对空六课”；非世界观、无固定身份的角色默认显示“阵营不明”，选择属性与特性后也不会改变阵营。悬停徽章可查看中文名称。阵营不可由玩家自选，不赋予技能、战斗加成或生物抗性。</p>
 <p>公共模组现有 21 项阵营，新增徽章采用统一手绘风格，供角色登记使用；预留阵营不代表对应角色已经加入。</p>
-<details><summary>查看阵营目录<span>+</span></summary>
+<details><summary>查看阵营目录</summary>
 <p>对空六课、阵营不明、罗斯凯利法·弗林特工坊、罗斯凯利法·空域巡戍局、达识结社、罗斯凯利法·外务筹策局、法厄同、治安局·都市秩序部、妄想天使、坎卜斯黑枝、怪啖屋、云岿山、反舌鸟、天琴座、卡吕冬之子、刑侦特勤组、防卫军·白银小队、防卫军·奥波勒斯小队、维多利亚家政、白祇重工、狡兔屋。</p>
 </details>
 </section>
@@ -188,7 +171,7 @@
 </dl>
 <p>异常伤害按各次积蓄时的快照加权；溢出的积蓄进入下一条。不同异常状态覆盖时触发一次<b>紊乱</b>，伤害依据被覆盖状态的快照和剩余时间结算；同一异常刷新不触发。冰与烈霜虽继承同一种伤害属性，但相互覆盖仍可触发紊乱。</p>
 <details class="guide-details" id="anomaly-formulas">
-<summary>展开查看异常与紊乱公式<span aria-hidden="true">+</span></summary>
+<summary>展开查看异常与紊乱公式</summary>
 <div class="guide-details-content">
 <p>下方以 <b>U</b> 表示每次积蓄时的「攻击力 × 异常精通 ÷ 100 × 适用增伤」快照，按各次积蓄量加权后的结果；多人共同积蓄时也按各自的贡献加权。<b>T</b> 为被覆盖状态的剩余秒数，限制在 0～10 秒。⌊ ⌋ 表示向下取整。</p>
 <dl class="profile-list">
@@ -285,7 +268,7 @@
 </div>
 <p class="muted">套装按各自件数生效；总暴击率上限 100%。折枝剑歌不足四件或死亡时，四件套增益消失。以星见雅为例，基础掌控 116 已满足折枝四件门槛；不计其他装备时，暴击伤害由基础 50% 提升至两件 66%、四件 96%。</p>
 <details class="guide-details" id="drive-stats">
-<summary>品级与词条<span aria-hidden="true">+</span>
+<summary>品级与词条
 </summary>
 <div class="guide-details-content">
 <h3>主词条</h3>
@@ -382,7 +365,7 @@
 </div>
 </details>
 <details class="guide-details" id="drive-equip">
-<summary>装配与筛选<span aria-hidden="true">+</span>
+<summary>装配与筛选
 </summary>
 <div class="guide-details-content">
 <p>盘位从左上开始逆时针排列：左上 1、左中 2、左下 3、右下 4、右中 5、右上 6。装配页默认选择 1 号位，并优先选中已装备的盘；选择持有的驱动盘并点击<b>“装配所选”</b>，它会装入自己的固定盘位；每个盘位只能装一个。</p>
@@ -390,7 +373,7 @@
 </div>
 </details>
 <details class="guide-details" id="drive-tuning">
-<summary>调律<span aria-hidden="true">+</span>
+<summary>调律
 </summary>
 <div class="guide-details-content">
 <p>在装配页选择驱动盘并点击“调律”，可指定更换一条词条：4～6 号主词条消耗 1 个调律校音器，任意盘位的副词条消耗 1 个谐振核心仪。不能选择重复或相同词条；稳固等级随机为 1～3。</p>
@@ -411,7 +394,7 @@
 </div>
 </details>
 <details class="guide-details" id="drive-drops">
-<summary>击败掉落<span aria-hidden="true">+</span>
+<summary>击败掉落
 </summary>
 <div class="guide-details-content">
 <p>符合条件的巨兽，以及树精守卫、蜘蛛女王，每只统一掉落<b>一张</b>随机套装、随机盘位驱动盘：<b>第 1～69 天：A 级 37.5% / B 级 62.5%；第 70 天起：S 级 20% / A 级 30% / B 级 50%</b>。按结算时世界显示天数判断，洞穴同步世界时钟，不按角色生存天数计数。
@@ -420,7 +403,7 @@
 </div>
 </details>
 <details class="guide-details" id="drive-interface">
-<summary>界面位置与操作<span aria-hidden="true">+</span>
+<summary>界面位置与操作
 </summary>
 <div class="guide-details-content">
 <h3>界面位置</h3>
@@ -876,8 +859,6 @@
 </div>
 <p class="muted">锤拆返还石砖 ×3、电量 ×1、金块 ×3、电子元件 ×1。</p>
 </section>
-</div>
-</div>
 <footer>
 <span>绝区零 / ZZZ <small>饥荒联机版模组 · 作者：关东</small>
 </span>
@@ -891,14 +872,14 @@
 </main>
 </div>
 <dialog id="global-search-dialog" class="global-search-dialog" aria-labelledby="global-search-title">
-<div class="global-search-heading"><div><h2 id="global-search-title">搜索资料</h2><p>查找星见雅与绝区零模组的内容</p></div><form method="dialog"><button type="submit" aria-label="关闭搜索">×</button></form></div>
+<div class="global-search-heading"><div><h2 id="global-search-title">搜索资料</h2></div><form method="dialog"><button type="submit" aria-label="关闭搜索">×</button></form></div>
 <label class="global-search-field" for="global-search-input"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4 4"/></svg><input id="global-search-input" type="search" aria-label="搜索全部资料" placeholder="例如：霜月、驱动盘、升级材料" autocomplete="off"></label>
 <p id="global-search-status" class="global-search-status" role="status">输入关键词开始搜索。</p>
 <ul id="global-search-results" class="global-search-results"></ul>
 </dialog>
 <div id="toast" role="status" aria-live="polite">
 </div>
-<script src="app.js?v=wiki-2">
+<script src="app.js?v=docs-1">
 </script>
 </body>
 </html>

@@ -1,67 +1,20 @@
 const $ = selector => document.querySelector(selector);
 const nav = [...document.querySelectorAll('#nav a')];
-const searchInput = $('#search');
 const menu = $('#menu');
 const sidebar = $('#sidebar');
-let filter = 'all';
-
-function writeSnippet(link, target, query) {
-  link.querySelector('.nav-match')?.remove();
-  if (!query || link.hidden) return;
-
-  const text = target.textContent.replace(/\s+/g, ' ').trim();
-  const index = text.toLowerCase().indexOf(query);
-  if (index < 0) return;
-
-  const start = Math.max(0, index - 14);
-  const end = Math.min(text.length, index + query.length + 28);
-  const snippet = document.createElement('small');
-  snippet.className = 'nav-match';
-  if (start > 0) snippet.append('…');
-  snippet.append(text.slice(start, index));
-  const mark = document.createElement('mark');
-  mark.textContent = text.slice(index, index + query.length);
-  snippet.append(mark, text.slice(index + query.length, end));
-  if (end < text.length) snippet.append('…');
-  link.append(snippet);
-}
-
-function search() {
-  const query = (searchInput?.value || '').trim().toLowerCase();
-  let count = 0;
-
-  nav.forEach(link => {
-    const target = document.querySelector(link.hash);
-    const matchesQuery = !query || target.textContent.toLowerCase().includes(query);
-    const matchesFilter = filter === 'all' || link.dataset.tag === filter;
-    link.hidden = !(matchesQuery && matchesFilter);
-    if (!link.hidden) count++;
-    writeSnippet(link, target, query);
-  });
-
-  $('#count').textContent = String(count);
-  $('#empty').hidden = count > 0;
-}
-
-searchInput?.addEventListener('input', search);
-searchInput?.addEventListener('keydown', event => {
-  if (event.key !== 'Enter') return;
-  const firstMatch = nav.find(link => !link.hidden);
-  if (!firstMatch) return;
-  firstMatch.click();
-  if (matchMedia('(min-width: 851px)').matches) firstMatch.focus();
-});
 
 document.querySelectorAll('[data-filter]').forEach(button => {
   button.setAttribute('aria-pressed', String(button.classList.contains('selected')));
   button.addEventListener('click', () => {
-    filter = button.dataset.filter;
+    const filter = button.dataset.filter;
     document.querySelectorAll('[data-filter]').forEach(item => {
       const selected = item === button;
       item.classList.toggle('selected', selected);
       item.setAttribute('aria-pressed', String(selected));
     });
-    search();
+    nav.forEach(link => {
+      link.hidden = filter !== 'all' && link.dataset.tag !== filter;
+    });
   });
 });
 
@@ -72,18 +25,13 @@ backdrop.setAttribute('aria-label', '关闭目录');
 backdrop.hidden = true;
 document.body.append(backdrop);
 
-function openMenu(focusSearch = false) {
-  if (matchMedia('(min-width: 851px)').matches) {
-    if (searchInput) searchInput.focus();
-    else $('#global-search-open')?.click();
-    return;
-  }
+function openMenu() {
   sidebar.classList.add('open');
   menu.setAttribute('aria-expanded', 'true');
   backdrop.hidden = false;
   document.body.classList.add('nav-open');
   document.querySelector('.page').inert = true;
-  (focusSearch && searchInput ? searchInput : sidebar.querySelector('a, button')).focus();
+  sidebar.querySelector('a, button').focus();
 }
 
 function closeMenu(restoreFocus = false) {
@@ -110,8 +58,7 @@ document.addEventListener('keydown', event => {
   const tag = event.target.tagName;
   if (event.key === '/' && !['INPUT', 'TEXTAREA', 'SELECT'].includes(tag) && !event.target.isContentEditable) {
     event.preventDefault();
-    if (searchInput) openMenu(true);
-    else $('#global-search-open')?.click();
+    $('#global-search-open')?.click();
   }
   if (event.key === 'Escape') closeMenu(true);
   if (event.key === 'Tab' && sidebar.classList.contains('open')) {
@@ -129,14 +76,13 @@ document.addEventListener('keydown', event => {
 });
 
 nav.forEach(link => link.addEventListener('click', () => {
-  const query = (searchInput?.value || '').trim().toLowerCase();
-  if (query) {
-    const target = document.querySelector(link.hash);
-    target.querySelectorAll('details').forEach(details => {
-      if (details.textContent.toLowerCase().includes(query)) details.open = true;
-    });
-  }
+  const wasOpen = sidebar.classList.contains('open');
   closeMenu();
+  if (wasOpen) {
+    const section = document.querySelector(link.hash);
+    section.tabIndex = -1;
+    section.focus({ preventScroll: true });
+  }
 }));
 
 // Open a linked disclosure before the browser scrolls to it.
@@ -352,7 +298,7 @@ if (globalDialog && globalTrigger && globalInput && globalStatus && globalResult
       });
     } catch {
       if (request === globalRequest && globalDialog.open) {
-        globalStatus.textContent = '资料暂时无法加载，请稍后重试或使用左侧本页搜索。';
+        globalStatus.textContent = '资料暂时无法加载，请稍后重试或使用本页目录。';
       }
     }
   }
@@ -400,7 +346,6 @@ if (globalDialog && globalTrigger && globalInput && globalStatus && globalResult
   });
 }
 
-search();
 
 // Native tab keys keep the wardrobe usable without a pointer.
 const skinButtons = [...document.querySelectorAll('[data-skin]')];
