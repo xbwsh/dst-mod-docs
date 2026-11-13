@@ -234,3 +234,12 @@ footer {
   .global-search-trigger span { display: none; }
   .wardrobe { grid-template-columns: minmax(0, 1fr) 84px; gap: 10px; }
 }
+
+.mod-list { list-style: none; padding: 0; margin: 0; }
+.mod-list li + li { margin-top: 0; border-top: 1px solid var(--line); }
+.mod-list a { display: flex; align-items: center; gap: 20px; padding: 16px 0; font-size: 18px; font-weight: 700; text-decoration: none; }
+.mod-list a:hover span { text-decoration: underline; }
+.mod-list img { width: 96px; height: 96px; flex: 0 0 96px; }
+@media (max-width: 480px) {
+  .mod-list img { width: 72px; height: 72px; flex-basis: 72px; }
+}
