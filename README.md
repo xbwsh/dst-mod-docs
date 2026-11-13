@@ -8,7 +8,7 @@
 
 在仓库 Settings → Pages → Build and deployment 中选择 GitHub Actions。推送到 `main` 后自动部署。
 
-网站地址：https://xbwsh.github.io/miyabi-mod-guide/
+网站地址：https://xbwsh.github.io/dst-mod-docs/
 
 ## 文件
 
