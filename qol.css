@@ -1,0 +1,102 @@
+.qol-texture {
+  --qol-icon-size: 1.45rem;
+  display: inline-block;
+  flex: 0 0 var(--qol-icon-size);
+  width: var(--qol-icon-size);
+  height: var(--qol-icon-size);
+  background-image: url("assets/qol-textures.webp");
+  background-repeat: no-repeat;
+  background-size: 800% 700%;
+}
+.qol-feature-icon { --qol-icon-size: 2.35rem; }
+.qol-row-icon { --qol-icon-size: 1.9rem; }
+.qol-portrait { --qol-icon-size: 5.75rem; }
+.dark .qol-texture { filter: drop-shadow(0 0 1px #dac7a080); }
+.qol-illustrated,
+.qol-topic-links a,
+.qol-material {
+  display: inline-flex;
+  align-items: center;
+  gap: .4em;
+}
+.qol-material { vertical-align: middle; }
+h2.qol-illustrated,
+h3.qol-illustrated { display: flex; }
+th .qol-illustrated { white-space: nowrap; }
+.qol-character {
+  display: flex;
+  align-items: center;
+  gap: .85rem;
+}
+.qol-character h2,
+.qol-character p { margin: 0; }
+.qol-character p { margin-top: .35rem; }
+.qol-topic-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
+  gap: .5rem .85rem;
+  margin-top: 1rem;
+}
+.qol-topic-links a {
+  border-bottom: 1px solid var(--line);
+  min-height: 3rem;
+}
+.qol-topic-links a:focus-visible { outline-offset: 3px; }
+@media (max-width: 560px) {
+  .qol-portrait { --qol-icon-size: 4.75rem; }
+}
+
+.qol-texture[data-texture="willow"] { background-position: 0.00000% 0.00000%; }
+.qol-texture[data-texture="wathgrithr"] { background-position: 14.28571% 0.00000%; }
+.qol-texture[data-texture="wortox"] { background-position: 28.57143% 0.00000%; }
+.qol-texture[data-texture="qol_opal_spear"] { background-position: 42.85714% 0.00000%; }
+.qol-texture[data-texture="qol_teleport_amulet"] { background-position: 57.14286% 0.00000%; }
+.qol-texture[data-texture="qol_threat_amulet"] { background-position: 71.42857% 0.00000%; }
+.qol-texture[data-texture="qol_monkey_amulet"] { background-position: 85.71429% 0.00000%; }
+.qol-texture[data-texture="qol_toad_amulet"] { background-position: 100.00000% 0.00000%; }
+.qol-texture[data-texture="qol_universal_generator"] { background-position: 0.00000% 16.66667%; }
+.qol-texture[data-texture="qol_wire_kit"] { background-position: 14.28571% 16.66667%; }
+.qol-texture[data-texture="qol_street_lamp"] { background-position: 28.57143% 16.66667%; }
+.qol-texture[data-texture="qol_sprinkler"] { background-position: 42.85714% 16.66667%; }
+.qol-texture[data-texture="qol_chest_pipe_kit"] { background-position: 57.14286% 16.66667%; }
+.qol-texture[data-texture="qol_chest_pipe_bridge_kit"] { background-position: 71.42857% 16.66667%; }
+.qol-texture[data-texture="armorvortexcloak"] { background-position: 85.71429% 16.66667%; }
+.qol-texture[data-texture="syw_knight_bernie"] { background-position: 100.00000% 16.66667%; }
+.qol-texture[data-texture="lighter"] { background-position: 0.00000% 33.33333%; }
+.qol-texture[data-texture="willow_ember"] { background-position: 14.28571% 33.33333%; }
+.qol-texture[data-texture="bernie_inactive"] { background-position: 28.57143% 33.33333%; }
+.qol-texture[data-texture="wathgrithr_shield"] { background-position: 42.85714% 33.33333%; }
+.qol-texture[data-texture="battlesong_container"] { background-position: 57.14286% 33.33333%; }
+.qol-texture[data-texture="wortox_souljar"] { background-position: 71.42857% 33.33333%; }
+.qol-texture[data-texture="wortox_soul"] { background-position: 85.71429% 33.33333%; }
+.qol-texture[data-texture="wortox_reviver"] { background-position: 100.00000% 33.33333%; }
+.qol-texture[data-texture="cookpot"] { background-position: 0.00000% 50.00000%; }
+.qol-texture[data-texture="icebox"] { background-position: 14.28571% 50.00000%; }
+.qol-texture[data-texture="saltbox"] { background-position: 28.57143% 50.00000%; }
+.qol-texture[data-texture="dragonflyfurnace"] { background-position: 42.85714% 50.00000%; }
+.qol-texture[data-texture="townportal"] { background-position: 57.14286% 50.00000%; }
+.qol-texture[data-texture="townportaltalisman"] { background-position: 71.42857% 50.00000%; }
+.qol-texture[data-texture="thulecite"] { background-position: 85.71429% 50.00000%; }
+.qol-texture[data-texture="armor_sanity"] { background-position: 100.00000% 50.00000%; }
+.qol-texture[data-texture="armorskeleton"] { background-position: 0.00000% 66.66667%; }
+.qol-texture[data-texture="shadowheart"] { background-position: 14.28571% 66.66667%; }
+.qol-texture[data-texture="krampus_sack"] { background-position: 28.57143% 66.66667%; }
+.qol-texture[data-texture="icepack"] { background-position: 42.85714% 66.66667%; }
+.qol-texture[data-texture="multitool_axe_pickaxe"] { background-position: 57.14286% 66.66667%; }
+.qol-texture[data-texture="trap_teeth"] { background-position: 71.42857% 66.66667%; }
+.qol-texture[data-texture="bluegem"] { background-position: 85.71429% 66.66667%; }
+.qol-texture[data-texture="redgem"] { background-position: 100.00000% 66.66667%; }
+.qol-texture[data-texture="greengem"] { background-position: 0.00000% 83.33333%; }
+.qol-texture[data-texture="ice"] { background-position: 14.28571% 83.33333%; }
+.qol-texture[data-texture="pepper"] { background-position: 28.57143% 83.33333%; }
+.qol-texture[data-texture="saltrock"] { background-position: 42.85714% 83.33333%; }
+.qol-texture[data-texture="froglegs"] { background-position: 57.14286% 83.33333%; }
+.qol-texture[data-texture="cave_banana"] { background-position: 71.42857% 83.33333%; }
+.qol-texture[data-texture="gears"] { background-position: 85.71429% 83.33333%; }
+.qol-texture[data-texture="fireflies"] { background-position: 100.00000% 83.33333%; }
+.qol-texture[data-texture="goldnugget"] { background-position: 0.00000% 100.00000%; }
+.qol-texture[data-texture="boards"] { background-position: 14.28571% 100.00000%; }
+.qol-texture[data-texture="cutgrass"] { background-position: 28.57143% 100.00000%; }
+.qol-texture[data-texture="cutstone"] { background-position: 42.85714% 100.00000%; }
+.qol-texture[data-texture="nightmarefuel"] { background-position: 57.14286% 100.00000%; }
+.qol-texture[data-texture="rope"] { background-position: 71.42857% 100.00000%; }

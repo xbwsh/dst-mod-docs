@@ -6,6 +6,7 @@
 <meta name="description" content="《日常新编》0.1.234：薇洛、薇格弗德、沃拓克斯、料理推荐、传送护符、管网与基地供电的玩法、配方及配置。">
 <title>日常新编 · 饥荒模组文档</title>
 <link rel="stylesheet" href="style.css?v=docs-1">
+<link rel="stylesheet" href="qol.css">
 <script src="legacy-links.js?v=5">
 </script>
 </head>
@@ -67,32 +68,42 @@
   </div>
   <p class="lead">扩展料理推荐、储物制作、基地供电与传送，并为薇洛、薇格弗德和沃拓克斯加入专属玩法。</p>
   <p>服务端和所有客户端均需启用。<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3837284473">Steam 创意工坊</a></p>
+  <nav class="qol-topic-links" aria-label="常用功能">
+    <a href="#cooking"><span class="qol-texture qol-feature-icon" data-texture="cookpot" aria-hidden="true"></span>料理推荐</a>
+    <a href="#storage"><span class="qol-texture qol-feature-icon" data-texture="qol_chest_pipe_kit" aria-hidden="true"></span>管网制作</a>
+    <a href="#power"><span class="qol-texture qol-feature-icon" data-texture="qol_universal_generator" aria-hidden="true"></span>基地供电</a>
+    <a href="#travel"><span class="qol-texture qol-feature-icon" data-texture="qol_teleport_amulet" aria-hidden="true"></span>传送护符</a>
+  </nav>
 </section>
 
 <section class="entry" id="willow">
-  <h2>薇洛</h2>
-  <p>打火机、施法和伯尼共用随身余烬。</p>
-  <h3>打火机与余烬格</h3>
+  <div class="qol-character">
+    <span class="qol-texture qol-portrait" data-texture="willow" aria-hidden="true"></span>
+    <div><h2>薇洛</h2><p>打火机、施法和伯尼共用随身余烬。</p></div>
+  </div>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="lighter" aria-hidden="true"></span>打火机与余烬格</h3>
   <p>装备打火机时，手部栏上方显示独立余烬格。可开启自动收集余烬。补耐久阈值可选 55% 或 10%，默认 55%。达到设定阈值后可消耗余烬补耐久。已解锁月火时，默认允许骑皮弗娄牛施放。</p>
-  <h3>控火与狂热焚烧</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="willow_ember" aria-hidden="true"></span>控火与狂热焚烧</h3>
   <p>控火令薇洛点燃的生物燃烧时间翻倍，燃烧伤害提高 50%。狂热焚烧消耗 1 个余烬开启，每 60 秒再消耗 1 个续期，物理伤害提高 25%，适用于月火和影火的物理部分。再次施放或点击状态图标可关闭。</p>
-  <h3>巨型伯尼</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="bernie_inactive" aria-hidden="true"></span>巨型伯尼</h3>
   <ul>
     <li><strong>头脑发热</strong>　学习技能并开启对应配置后，落地的伯尼会在发现敌人时自动巨大化并嘲讽。对巨兽强制嘲讽 4 秒，同一只伯尼对同一巨兽的自动嘲讽间隔为 10 秒。</li>
     <li><strong>燃烧伯尼</strong>　点燃后反伤光环持续 20 秒。开启自动续燃时，每轮消耗 1 个余烬，余烬耗尽后在本轮结束时熄灭。</li>
-    <li><strong>骑士伯尼</strong>　自己的巨型伯尼替薇洛承担护甲结算后 10% 的物理伤害。</li>
+    <li><strong class="qol-material"><span class="qol-texture" data-texture="syw_knight_bernie" aria-hidden="true"></span>骑士伯尼</strong>　自己的巨型伯尼替薇洛承担护甲结算后 10% 的物理伤害。</li>
     <li><strong>双重锁定</strong>　薇洛和巨型伯尼共同攻击同一目标时，10% 物理增伤也适用于月火和影火的物理部分。</li>
   </ul>
   <p>开启减伤与回血强化时，暗影与月亮形态的巨型伯尼受到的伤害降低 30%，低于半血时减伤提高至 55%。低于半血且已解锁对应生命回复技能时，每次技能回复量翻倍。</p>
 </section>
 
 <section class="entry" id="wathgrithr">
-  <h2>薇格弗德</h2>
-  <p>同时启用独立版《更全面的女武神》时，本组角色功能由独立版接管。</p>
-  <h3>战斗圆盾</h3>
+  <div class="qol-character">
+    <span class="qol-texture qol-portrait" data-texture="wathgrithr" aria-hidden="true"></span>
+    <div><h2>薇格弗德</h2><p>同时启用独立版《更全面的女武神》时，本组角色功能由独立版接管。</p></div>
+  </div>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="wathgrithr_shield" aria-hidden="true"></span>战斗圆盾</h3>
   <p>圆盾装在独立副手栏，主手持武器时也能格挡。格挡成功使本轮窗口延长 0.5 秒，并将充能至少提高至 75%，最多还剩 2.5 秒冷却。连续成功格挡会保留已有充能。</p>
   <p>战意触发时，战斗圆盾和统帅头盔按相同点数修复。手持经彩虹宝石升级的充能奔雷矛时，两件装备的修复量翻倍。</p>
-  <h3>奔雷矛</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="qol_opal_spear" aria-hidden="true"></span>奔雷矛</h3>
   <p>普通奔雷矛拥有 300 点耐久，充能奔雷矛拥有 400 点。彩虹宝石升级提供低血量斩杀。突刺每命中一个有效目标恢复 8 点矛耐久，单次最多 16 点。</p>
   <p>冲刺前摇可使用原版、15 帧或无前摇，默认无前摇。开启拳击袋练功时，打拳击袋可积攒灵感和战意，命中也可触发奔雷矛突刺的耐久修复。</p>
   <div class="table-wrap"><table aria-label="充能奔雷矛技能">
@@ -103,7 +114,7 @@
       <tr><th scope="row">天雷终章</th><td>9</td><td>突刺命中时，对首个有效目标额外造成 100 物理伤害和 30 位面伤害，冷却 10 秒。</td></tr>
     </tbody>
   </table></div>
-  <h3>战歌与战地指挥</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="battlesong_container" aria-hidden="true"></span>战歌与战地指挥</h3>
   <p>号子罐有 14 格。「粗鲁插曲」与「惊心独白」可从快捷栏施放，格内显示冷却。快捷栏可识别物品栏、已装备背包及随身号子罐里的战吼。</p>
   <ul>
     <li><strong>自动领唱</strong>　灵感足够且有空余战歌槽时，按号子罐顺序补唱尚未生效的持续战歌。</li>
@@ -114,19 +125,22 @@
 </section>
 
 <section class="entry" id="wortox">
-  <h2>沃拓克斯</h2>
-  <h3>灵魂罐</h3>
+  <div class="qol-character">
+    <span class="qol-texture qol-portrait" data-texture="wortox" aria-hidden="true"></span>
+    <div><h2>沃拓克斯</h2></div>
+  </div>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="wortox_souljar" aria-hidden="true"></span>灵魂罐</h3>
   <p class="muted"><code>wortox_souljar</code> · 随身容器</p>
-  <p>解锁灵魂罐技能后，用空瓶 ×1、大理石 ×2、红宝石 ×1 制作。散装灵魂达到上限时，多出的灵魂可以自动转入随身罐。学会对应进阶技能并携带灵魂罐时，可防止灵魂过载。</p>
+  <p>解锁灵魂罐技能后，用空瓶 ×1、大理石 ×2、<span class="qol-material"><span class="qol-texture" data-texture="redgem" aria-hidden="true"></span>红宝石 ×1</span> 制作。散装灵魂达到上限时，多出的灵魂可以自动转入随身罐。学会对应进阶技能并携带灵魂罐时，可防止灵魂过载。</p>
   <p>从地图发起长距离跳跃时优先扣除罐内灵魂，剩余费用由随身散装灵魂补足。近距离跳跃使用散装灵魂。状态栏区分物品栏和罐内数量。</p>
-  <h3>双尾心</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="wortox_reviver" aria-hidden="true"></span>双尾心</h3>
   <p class="muted"><code>wortox_reviver</code> · 回生物品</p>
-  <p>一级回生术解锁 10 个灵魂的配方，三级回生术将费用降为 5 个。释放折扣双尾心时，按实际投入乘以新鲜度比例并向上取整。例如用 5 个灵魂制作、剩余 50% 新鲜度时，可释放 3 个。分解返还也受实际投入限制。</p>
+  <p>一级回生术解锁 10 个灵魂的配方，三级回生术将费用降为 <span class="qol-material"><span class="qol-texture" data-texture="wortox_soul" aria-hidden="true"></span>5 个灵魂</span>。释放折扣双尾心时，按实际投入乘以新鲜度比例并向上取整。例如用 5 个灵魂制作、剩余 50% 新鲜度时，可释放 3 个。分解返还也受实际投入限制。</p>
 </section>
 
 <section class="entry" id="cooking">
-  <h2>料理推荐</h2>
-  <p>适用于普通餐锅、便携锅和档案馆料理锅。可读锅边的冰箱、盐盒，以及随身的树枝、干花瓣等指定填充物。</p>
+  <h2 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="cookpot" aria-hidden="true"></span>料理推荐</h2>
+  <p>适用于普通餐锅、便携锅和档案馆料理锅。可读锅边的<span class="qol-material"><span class="qol-texture" data-texture="icebox" aria-hidden="true"></span>冰箱</span>、<span class="qol-material"><span class="qol-texture" data-texture="saltbox" aria-hidden="true"></span>盐盒</span>，以及随身的树枝、干花瓣等指定填充物。</p>
   <h3>取料与成品预览</h3>
   <ol>
     <li>打开锅后先显示已经核对的可制作菜品，搜索到的新结果会陆续补入。</li>
@@ -139,10 +153,10 @@
 
 <section class="entry" id="storage">
   <h2>管网制作与收纳</h2>
-  <h3>管道套件</h3>
-  <p>在炼金引擎旁用石砖 ×1、金块 ×1、绳子 ×1 制作。可给木箱、龙鳞宝箱与制作站接管。站在接管的制作站旁使用原版制作栏时，会优先使用随身材料，再从相连箱子取料。</p>
-  <p>普通管道单段最长 3.25 个游戏单位。管道套件加 1 个齿轮可制作桥接套件，两端各装一个可跨接最多 4 个游戏单位，中途需要留出通道。自动整理默认关闭，开启后关箱会整理同一管网内已关闭的箱子。</p>
-  <h3>装备栏与龙鳞火炉</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="qol_chest_pipe_kit" aria-hidden="true"></span>管道套件</h3>
+  <p>在炼金引擎旁用<span class="qol-material"><span class="qol-texture" data-texture="cutstone" aria-hidden="true"></span>石砖 ×1</span>、<span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×1</span>、<span class="qol-material"><span class="qol-texture" data-texture="rope" aria-hidden="true"></span>绳子 ×1</span> 制作。可给木箱、龙鳞宝箱与制作站接管。站在接管的制作站旁使用原版制作栏时，会优先使用随身材料，再从相连箱子取料。</p>
+  <p>普通管道单段最长 3.25 个游戏单位。管道套件加 1 个齿轮可制作<span class="qol-material"><span class="qol-texture" data-texture="qol_chest_pipe_bridge_kit" aria-hidden="true"></span>桥接套件</span>，两端各装一个可跨接最多 4 个游戏单位，中途需要留出通道。自动整理默认关闭，开启后关箱会整理同一管网内已关闭的箱子。</p>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="dragonflyfurnace" aria-hidden="true"></span>装备栏与龙鳞火炉</h3>
   <p>独立背包栏默认关闭，开启后可同时穿背包和护甲。独立饰品栏默认开启，支持原版护符和相应模组护符。部分衣物可以穿在护甲内，空背包可以收进物品栏。</p>
   <p>龙鳞火炉有 9 格收纳，可批量烤熟食材，也能将木头按 1:1 加工成木炭。加工和原版焚烧使用独立按钮。</p>
 </section>
@@ -153,44 +167,44 @@
   <div class="table-wrap"><table aria-label="供电建筑与配方">
     <thead><tr><th scope="col">物品</th><th scope="col">炼金引擎配方</th><th scope="col">用途</th></tr></thead>
     <tbody>
-      <tr><th scope="row">通用发电机</th><td>金块 ×4、木板 ×4、齿轮 ×1</td><td>三个燃料格，支持木头、木炭、宝石、纯粹辉煌和启迪碎片。启迪碎片沿用过载及冷却。</td></tr>
-      <tr><th scope="row">电线套件</th><td>金块 ×1、草 ×2</td><td>每段约 4 格地皮，一条线路最多 12 个拐点，接好消耗 1 个套件。</td></tr>
-      <tr><th scope="row">路灯</th><td>石砖 ×2、金块 ×2、萤火虫 ×1</td><td>接线用电。断线后可使用荧光果，其腐坏速度为常速的 25%。</td></tr>
-      <tr><th scope="row">洒水器</th><td>金块 ×4、蓝宝石 ×1、冰 ×6</td><td>靠近海水放置，为植物和耕地浇水并协助灭火。优先用电，无电时可用燃料。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="qol_universal_generator" aria-hidden="true"></span>通用发电机</span></th><td><span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×4</span>、<span class="qol-material"><span class="qol-texture" data-texture="boards" aria-hidden="true"></span>木板 ×4</span>、<span class="qol-material"><span class="qol-texture" data-texture="gears" aria-hidden="true"></span>齿轮 ×1</span></td><td>三个燃料格，支持木头、木炭、宝石、纯粹辉煌和启迪碎片。启迪碎片沿用过载及冷却。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="qol_wire_kit" aria-hidden="true"></span>电线套件</span></th><td><span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×1</span>、<span class="qol-material"><span class="qol-texture" data-texture="cutgrass" aria-hidden="true"></span>草 ×2</span></td><td>每段约 4 格地皮，一条线路最多 12 个拐点，接好消耗 1 个套件。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="qol_street_lamp" aria-hidden="true"></span>路灯</span></th><td><span class="qol-material"><span class="qol-texture" data-texture="cutstone" aria-hidden="true"></span>石砖 ×2</span>、<span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×2</span>、<span class="qol-material"><span class="qol-texture" data-texture="fireflies" aria-hidden="true"></span>萤火虫 ×1</span></td><td>接线用电。断线后可使用荧光果，其腐坏速度为常速的 25%。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="qol_sprinkler" aria-hidden="true"></span>洒水器</span></th><td><span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×4</span>、<span class="qol-material"><span class="qol-texture" data-texture="bluegem" aria-hidden="true"></span>蓝宝石 ×1</span>、<span class="qol-material"><span class="qol-texture" data-texture="ice" aria-hidden="true"></span>冰 ×6</span></td><td>靠近海水放置，为植物和耕地浇水并协助灭火。优先用电，无电时可用燃料。</td></tr>
     </tbody>
   </table></div>
-  <p>拆下设备接线可回收套件，仍供其他设备使用的主线会保留。通用发电机也可为电线地皮与犬牙陷阱供电，通电陷阱触发后可以自动复位。</p>
+  <p>拆下设备接线可回收套件，仍供其他设备使用的主线会保留。通用发电机也可为电线地皮与犬牙陷阱供电，通电的<span class="qol-material"><span class="qol-texture" data-texture="trap_teeth" aria-hidden="true"></span>犬牙陷阱</span>触发后可以自动复位。</p>
 </section>
 
 <section class="entry" id="travel">
-  <h2>传送护符</h2>
+  <h2 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="qol_teleport_amulet" aria-hidden="true"></span>传送护符</h2>
   <p class="muted"><code>qol_teleport_amulet</code> · 饰品</p>
-  <p>在远古伪科学站使用铥矿 ×2、噩梦燃料 ×3、砂之石 ×1 制作。佩戴后右键触摸懒人传送塔，可独自选择已探索且路线可达的塔。塔支持命名，未命名时显示编号。骑乘或搬运重物时无法使用。</p>
+  <p>在远古伪科学站使用<span class="qol-material"><span class="qol-texture" data-texture="thulecite" aria-hidden="true"></span>铥矿 ×2</span>、<span class="qol-material"><span class="qol-texture" data-texture="nightmarefuel" aria-hidden="true"></span>噩梦燃料 ×3</span>、<span class="qol-material"><span class="qol-texture" data-texture="townportaltalisman" aria-hidden="true"></span>砂之石 ×1</span> 制作。佩戴后右键触摸<span class="qol-material"><span class="qol-texture" data-texture="townportal" aria-hidden="true"></span>懒人传送塔</span>，可独自选择已探索且路线可达的塔。塔支持命名，未命名时显示编号。骑乘或搬运重物时无法使用。</p>
   <p>每次成功传送消耗 1 点耐久和 50 点理智。满耐久可用 30 次，1 颗砂之石修复 15 次。</p>
 </section>
 
 <section class="entry" id="aggro">
-  <h2>巨兽仇恨</h2>
+  <h2 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="qol_threat_amulet" aria-hidden="true"></span>巨兽仇恨</h2>
   <p>巨兽按实际扣除的生命累积仇恨，优先追击能攻击的目标中仇恨最高者。强制嘲讽结束后会按累计仇恨重新选目标。</p>
   <ul>
     <li>普通角色按 1 倍计算。薇格弗德默认 3 倍，可改回 1 倍。</li>
     <li>巨型伯尼的伤害与反伤按 50 倍计算。</li>
-    <li>佩戴仇恨护符时，玩家的倍率固定为 5 倍。护符无耐久消耗，在暗影操控器旁用金块 ×3、噩梦燃料 ×3、红宝石 ×1 制作。</li>
+    <li>佩戴仇恨护符时，玩家的倍率固定为 5 倍。护符无耐久消耗，在暗影操控器旁用<span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×3</span>、<span class="qol-material"><span class="qol-texture" data-texture="nightmarefuel" aria-hidden="true"></span>噩梦燃料 ×3</span>、<span class="qol-material"><span class="qol-texture" data-texture="redgem" aria-hidden="true"></span>红宝石 ×1</span> 制作。</li>
   </ul>
 </section>
 
 <section class="entry" id="equipment">
   <h2>装备与护符</h2>
-  <h3>漩涡斗篷</h3>
+  <h3 class="qol-illustrated"><span class="qol-texture qol-feature-icon" data-texture="armorvortexcloak" aria-hidden="true"></span>漩涡斗篷</h3>
   <p class="muted"><code>qol_vortex_cloak</code> · 储物与护甲</p>
-  <p>使用噩梦燃料 ×5、暗影护甲 ×1 制作，基础容量为 10 格。手持斗篷可右键吞噬放在地上的升级物品。</p>
+  <p>使用<span class="qol-material"><span class="qol-texture" data-texture="nightmarefuel" aria-hidden="true"></span>噩梦燃料 ×5</span>、<span class="qol-material"><span class="qol-texture" data-texture="armor_sanity" aria-hidden="true"></span>暗影护甲 ×1</span> 制作，基础容量为 10 格。手持斗篷可右键吞噬放在地上的升级物品。</p>
   <div class="table-wrap"><table aria-label="漩涡斗篷升级">
     <thead><tr><th scope="col">吞噬物品</th><th scope="col">效果</th></tr></thead>
     <tbody>
-      <tr><th scope="row">坎普斯背包</th><td>扩为 14 格。</td></tr>
-      <tr><th scope="row">保鲜背包</th><td>底部四格的物品腐坏速度减半。</td></tr>
-      <tr><th scope="row">暗影心房</th><td>获得 1260 点护甲耐久，物理吸收从 50% 起步。之后可用纯粹恐惧和纯粹辉煌继续强化。</td></tr>
-      <tr><th scope="row">骨甲</th><td>心房升级后才可吞噬。护盾沿用骨甲冷却，每次触发消耗 5% 最大耐久。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="krampus_sack" aria-hidden="true"></span>坎普斯背包</span></th><td>扩为 14 格。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="icepack" aria-hidden="true"></span>保鲜背包</span></th><td>底部四格的物品腐坏速度减半。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="shadowheart" aria-hidden="true"></span>暗影心房</span></th><td>获得 1260 点护甲耐久，物理吸收从 50% 起步。之后可用纯粹恐惧和纯粹辉煌继续强化。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="armorskeleton" aria-hidden="true"></span>骨甲</span></th><td>心房升级后才可吞噬。护盾沿用骨甲冷却，每次触发消耗 5% 最大耐久。</td></tr>
     </tbody>
   </table></div>
   <p>升级后的斗篷穿戴时可自修。普通理智状态下，基础消耗为每分钟 20 点理智。启蒙状态下，自修速度为平时的 75%。</p>
@@ -198,13 +212,13 @@
   <div class="table-wrap"><table aria-label="专用护符">
     <thead><tr><th scope="col">护符</th><th scope="col">制作</th><th scope="col">佩戴效果</th></tr></thead>
     <tbody>
-      <tr><th scope="row">猴子护符</th><td>灵子分解器 · 金块 ×3、香蕉 ×2、绿宝石 ×1</td><td>佩戴者亲手击杀海盗猴时掉落净化的诅咒饰品。可安全拾取，每个可向猪王换 2 个金块，或向蚁狮换 2 块石头。</td></tr>
-      <tr><th scope="row">蟾蜍护符</th><td>暗影操控器 · 辣椒 ×2、盐晶 ×3、蛙腿 ×2、金块 ×3</td><td>对普通和悲惨的毒菌蟾蜍造成双倍伤害，受到的相关伤害减少 30%。可累计佩戴三天。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="qol_monkey_amulet" aria-hidden="true"></span>猴子护符</span></th><td>灵子分解器 · <span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×3</span>、<span class="qol-material"><span class="qol-texture" data-texture="cave_banana" aria-hidden="true"></span>香蕉 ×2</span>、<span class="qol-material"><span class="qol-texture" data-texture="greengem" aria-hidden="true"></span>绿宝石 ×1</span></td><td>佩戴者亲手击杀海盗猴时掉落净化的诅咒饰品。可安全拾取，每个可向猪王换 2 个金块，或向蚁狮换 2 块石头。</td></tr>
+      <tr><th scope="row"><span class="qol-illustrated"><span class="qol-texture qol-row-icon" data-texture="qol_toad_amulet" aria-hidden="true"></span>蟾蜍护符</span></th><td>暗影操控器 · <span class="qol-material"><span class="qol-texture" data-texture="pepper" aria-hidden="true"></span>辣椒 ×2</span>、<span class="qol-material"><span class="qol-texture" data-texture="saltrock" aria-hidden="true"></span>盐晶 ×3</span>、<span class="qol-material"><span class="qol-texture" data-texture="froglegs" aria-hidden="true"></span>蛙腿 ×2</span>、<span class="qol-material"><span class="qol-texture" data-texture="goldnugget" aria-hidden="true"></span>金块 ×3</span></td><td>对普通和悲惨的毒菌蟾蜍造成双倍伤害，受到的相关伤害减少 30%。可累计佩戴三天。</td></tr>
     </tbody>
   </table></div>
   <h3>原版装备调整</h3>
   <ul>
-    <li><strong>多用斧镐</strong>　最大耐久 1260，基础攻击力 22.5。原版旧档首次启用时按比例继承，400/800 变成 630/1260。此前用同一模组保存的 400/1260 保留原值，迁移后再次保存则沿用当时的点数。</li>
+    <li><strong class="qol-material"><span class="qol-texture" data-texture="multitool_axe_pickaxe" aria-hidden="true"></span>多用斧镐</strong>　最大耐久 1260，基础攻击力 22.5。原版旧档首次启用时按比例继承，400/800 变成 630/1260。此前用同一模组保存的 400/1260 保留原值，迁移后再次保存则沿用当时的点数。</li>
     <li><strong>玻璃刀</strong>　月亮亲和角色使用时耐久消耗减半，可与对暗影目标的原有减免叠加。</li>
     <li><strong>暗夜剑</strong>　攻击月亮阵营目标消耗半点耐久，并造成 10% 额外伤害。</li>
     <li><strong>双壳套装</strong>　给尖壳蜗牛或圆壳蜗牛一颗盐晶，可分别取得贝壳头盔或蜗壳护甲。两件同穿时，缩壳挡击使两件装备各少扣 25% 耐久。</li>
